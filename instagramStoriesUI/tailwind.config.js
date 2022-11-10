@@ -3,7 +3,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ["./index.html", "./index2.html"],
+  content: ["./index.html", "./index2.html", "./remakeNavBar.html"],
   theme: {
     extend: {
       colors: {
