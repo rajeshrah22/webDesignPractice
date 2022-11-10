@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Page Title</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  label, input {
+    display: block;
+  }
+</style>
+<script>
+
+  function validate() {
+    let x = document.forms["form1"]["pass"].value;
+
+    if (x.length < 6) {
+      document.getElementById("textID").innerHTML = "TooShort!";
+    }
+    else {
+      document.getElementById("textID").innerHTML = "Long Enough. Valid";
+    }
+  }
+
+</script>
+  <body>
+    <form id = "form1" onsubmit = "return validate()">
+      <label for = "pass">Enter Password</label>
+      <input type = "text" id = "pass" name = "password">
+      <p id = "textID"></p>
+      <button type = "button" onclick = "validate()">Submit</button>
+    </form>
+
+
+  </body>
+</html>
