@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <link href = "./dist/output.css" rel = "stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TailwindCloneSite2</title>
+    <!-- script for the menu icon-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </head>
+  <body class = "bg-cyan-400">
+    <nav class = "bg-white p-5 shadow md:flex md:items-center md:justify-between">
+      <div class = "flex justify-between items-center">
+        <span class = "text-2xl font-[Poppins] cursor-pointer">
+          <img class = "inline h-10" src = "https://imgs.search.brave.com/8NjLGz8KAAtMK1Ug7h2V0lGY1ejbtmxVgtbglxTawfk/rs:fit:288:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5I/XzZtdTQzTTFDcWl1/R3lSVjlXQ0NnQUFB/QSZwaWQ9QXBp">
+          tailwindCSS
+        </span>
+
+        <span class = "text-3xl md:hidden cursor-pointer block mx-2">
+          <ion-icon name="menu" onclick="return Menu(this)"></ion-icon>
+        </span>
+      </div>
+
+      <ul class = "md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-6 md:opacity-100 top-[-400px]">
+        <li class = "mx-4 my-6 md:my-0"><a class = "text-xl hover:text-cyan-400" href = "#">HOME</a></li>
+        <li class = "mx-4 my-6 md:my-0"><a class = "text-xl hover:text-cyan-400" href = "#">YESS</a></li>
+        <li class = "mx-4 my-6 md:my-0"><a class = "text-xl hover:text-cyan-400" href = "#">WHAT</a></li>
+        <li class = "mx-4 my-6 md:my-0"><a class = "text-xl hover:text-cyan-400" href = "#">CONTACT</a></li>
+        <li class = "mx-4 my-6 md:my-0"><a class = "text-xl hover:text-cyan-400" href = "#">NO</a></li>
+
+        <button class = "bg-cyan-400 rounded text-white font-[Poppins] duration-500 px-6 py-2 mx-4 hover:bg-cyan-500">
+          Get started
+        </button>
+      </ul>
+    </nav>
+
+    <script>
+      function Menu(e) {
+        let list = document.querySelector('ul');
+
+        e.name === 'menu' ? (e.name = "close", list.classList.add('top-[75px]'), list.classList.add("opacity-100")) :( e.name = "menu", list.classList.remove("top-[75px]"), list.classList.remove("opacity-100"))
+      }
+    </script>
+  </body>
+</html>
